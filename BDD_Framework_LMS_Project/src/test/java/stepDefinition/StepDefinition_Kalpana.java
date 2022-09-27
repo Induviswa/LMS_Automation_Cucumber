@@ -20,7 +20,7 @@ public class StepDefinition_Kalpana extends BaseClass_Kalpana {
 	@Given("User launch browser")
 	public void user_launch_browser() {
  
-	  System.setProperty("webdriver.chrome.driver", "C:\\chromedriver.exe");
+	  System.setProperty("webdriver.chrome.driver", "/Users/Indu/Indu_Files/BDD_Framework_LMS_Project/src/main/resources/Browsers/chromedriver");
 		driver = new ChromeDriver();
 		driver.manage().window().maximize();
 		lp = new LoginPage_Kalpana(driver);

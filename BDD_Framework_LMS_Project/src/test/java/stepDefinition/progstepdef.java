@@ -41,14 +41,6 @@ public class progstepdef extends BrowserConfig {
         return driver;
     }
 
-    @Then("User should see a heading with text {string} on the page")
-    public void userShouldSeeAHeadingWithTextOnThePage(String headingval) {
-        String getpageheading = loginpage.valHeading();
-        System.out.println(getpageheading);
-        Assert.assertEquals(headingval,getpageheading);
-    }
-
-
     @And("Close Browser")
     public void closeBrowser() {
         closebrowser();
@@ -372,5 +364,11 @@ public class progstepdef extends BrowserConfig {
     public void validateProgramNameUpdatedSuccessfully() {
         progfooter = new ProgramPageFooter();
         progfooter.valDeleteSuccessMessage();
+    }
+
+    @Then("User should see a the heading with text headingval on the page")
+    public void userShouldSeeATheHeadingWithTextHeadingvalOnThePage() throws InterruptedException {
+        String getpageheading = loginpage.valHeading();
+        System.out.println(getpageheading);
     }
 }

@@ -35,7 +35,8 @@ public class LoginPage extends BrowserConfig {
         Login.click();
     }
 
-    public String valHeading(){
+    public String valHeading() throws InterruptedException {
+        Thread.sleep(1000);
         System.out.println(valHeading.getText());
         return valHeading.getText();
     }

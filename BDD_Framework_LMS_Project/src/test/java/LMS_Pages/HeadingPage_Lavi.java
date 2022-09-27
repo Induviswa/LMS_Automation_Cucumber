@@ -11,7 +11,6 @@ public class HeadingPage_Lavi extends BrowserConfig {
 	
 	//WebDriver driver;
 	public HeadingPage_Lavi() {
-		//this.driver = driver;
 		PageFactory.initElements(driver,this);
 	}
 	public void login() {
@@ -33,13 +32,4 @@ System.out.println("HomePage");
 	
 	}
 
-	
-	
-	
-	
-	
-	
-	
-
 	}
-

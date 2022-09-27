@@ -21,7 +21,7 @@ Feature: Add New Program
         Then User can see Successful Program Deleted message
         Examples:
           | Name            | Description         |status        |
-          | "TestPrograme23"| "TestDescription23" |"Inactive"       |
+          | "TestPrograme25"| "TestDescription23" |"Inactive"       |
 
   Scenario Outline: Enter Program Name
     Given User clicks A New Program button
@@ -34,4 +34,4 @@ Feature: Add New Program
     And Close Browser
     Examples:
       | Name            | Description         |status        |
-      | "TestPrograme23"| "TestDescription23" |"Inactive"       |
+      | "TestPrograme25"| "TestDescription23" |"Inactive"       |
