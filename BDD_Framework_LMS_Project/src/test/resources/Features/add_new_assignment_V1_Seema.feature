@@ -33,3 +33,4 @@ Scenario: Click Cancel
 #Given User is on Assignment page
 When User clicks as a Cancel button
 Then User can see assignment Details form disappears
+  And Close Browser

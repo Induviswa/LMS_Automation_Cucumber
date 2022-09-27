@@ -24,3 +24,4 @@ Scenario: Verify that the results are displayed in Ascending order of Program Na
 Given User is on Batch page
 When User clicks on the Ascending arrow (down ) near to the Program Name
 Then  User can see the results in Ascending order of Program Name
+  And Close Browser

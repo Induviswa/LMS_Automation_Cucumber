@@ -25,3 +25,4 @@ Feature: Delete Multiple Batch
     Given User is on Batch Confirm Deletion Page6
     When User clicks No button
     Then User can see Batch is not deleted.
+           And Close Browser

@@ -20,3 +20,4 @@ Scenario: delete feature
         Given User is on Batch Confirm Deletion Page 7
     When User clicks No button7
    Then User can see Batch is not deleted7
+      And Close Browser

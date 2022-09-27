@@ -8,3 +8,4 @@ Scenario: Fucntionality of Cancel(x) icon
 Given User is on User details window
 When User clicks A cancel(X) icon
 Then User details window should be closed
+  And Close Browser

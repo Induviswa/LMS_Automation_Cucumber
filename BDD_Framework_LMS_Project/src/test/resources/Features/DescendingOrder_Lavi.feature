@@ -20,3 +20,4 @@ Scenario:
 Given User is on Batch page
 When Verify that the results are displayed in Descending order of Program Name
 Then User can see the results in Descending order of Program Name
+  And Close Browser

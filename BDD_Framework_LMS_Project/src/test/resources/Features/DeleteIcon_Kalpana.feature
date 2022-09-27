@@ -41,3 +41,4 @@ Scenario: Validating Confirm dialog box by clicking close(x) icon
 Given User is in confirm dialog box after clicking delete icon
 When 	User clicks the close(x) icon
 Then Confirm dialog box should be closed#Author: your.email@your.domain.com
+  And Close Browser

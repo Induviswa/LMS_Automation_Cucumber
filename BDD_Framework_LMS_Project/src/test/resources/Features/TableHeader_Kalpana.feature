@@ -22,3 +22,4 @@ Scenario:Check box in table header
 Given User table is displayed in manage user page
 When User unchecks checkbox in header
 Then Check box in all the rows of user table should be unchecked
+  And Close Browser

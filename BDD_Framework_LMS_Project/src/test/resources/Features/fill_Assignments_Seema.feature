@@ -7,3 +7,4 @@ Scenario: Veriy Submit with data
 #Given User is on Assignment Page
 When User enter reguired details and submit
 Then User can see Submit Assignment Sucessfully
+  And Close Browser

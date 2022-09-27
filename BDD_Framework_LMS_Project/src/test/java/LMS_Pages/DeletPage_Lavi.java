@@ -10,7 +10,7 @@ import io.cucumber.java.en.Given;
 import io.cucumber.java.en.When;
 
 public class DeletPage_Lavi extends BrowserConfig {
-	WebDriver driver;
+	//WebDriver driver;
 		public DeletPage_Lavi() {
 			PageFactory.initElements(driver,this);
 		}

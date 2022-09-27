@@ -7,7 +7,9 @@ import org.junit.runner.RunWith;
 @RunWith(Cucumber.class)
 @CucumberOptions
         (
-                features = {"/Users/Indu/Indu_Files/BDD_Framework_LMS_Project/src/test/resources/Features/Program.feature",
+                features = {"/Users/Indu/Indu_Files/LMS_Cucumber_Automation/LMS_Automation_Cucumber/BDD_Framework_LMS_Project/src/test/resources/Features/Login_Hyma.feature",
+                        "/Users/Indu/Indu_Files/LMS_Cucumber_Automation/LMS_Automation_Cucumber/BDD_Framework_LMS_Project/src/test/resources/Features/Homepage_Hyma.feature",
+                        "/Users/Indu/Indu_Files/LMS_Cucumber_Automation/LMS_Automation_Cucumber/BDD_Framework_LMS_Project/src/test/resources/Features/Program.feature",
                         "/Users/Indu/Indu_Files/BDD_Framework_LMS_Project/src/test/resources/Features/Footer.feature",
                         "/Users/Indu/Indu_Files/BDD_Framework_LMS_Project/src/test/resources/Features/Delete.feature",
                         "/Users/Indu/Indu_Files/BDD_Framework_LMS_Project/src/test/resources/Features/NoofRecords.feature",
@@ -19,8 +21,6 @@ import org.junit.runner.RunWith;
                         "/Users/Indu/Indu_Files/BDD_Framework_LMS_Project/src/test/resources/Features/Pagination.feature",
                         "/Users/Indu/Indu_Files/BDD_Framework_LMS_Project/src/test/resources/Features/SortAscending.feature",
                         "/Users/Indu/Indu_Files/BDD_Framework_LMS_Project/src/test/resources/Features/SortDecending.feature",
-                        "/Users/Indu/Indu_Files/BDD_Framework_LMS_Project/src/test/resources/Features/Login_Hyma.feature",
-                        "/Users/Indu/Indu_Files/BDD_Framework_LMS_Project/src/test/resources/Features/Homepage_Hyma.feature",
                 "/Users/Indu/Indu_Files/LMS_Cucumber_Automation/LMS_Automation_Cucumber/BDD_Framework_LMS_Project/src/test/resources/Features/add_new_assignment_V1_Seema.feature",
                 "/Users/Indu/Indu_Files/LMS_Cucumber_Automation/LMS_Automation_Cucumber/BDD_Framework_LMS_Project/src/test/resources/Features/AddBatch_Lavi.feature",
                         "/Users/Indu/Indu_Files/LMS_Cucumber_Automation/LMS_Automation_Cucumber/BDD_Framework_LMS_Project/src/test/resources/Features/Ascendingorder_Lavi.feature",

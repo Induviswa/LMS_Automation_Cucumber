@@ -12,3 +12,4 @@ Scenario: Click No
 Given User is on Confirm Deletion form
 When   User clicks <No> button
 Then  User can see Confirm Deletion form disappears
+  And Close Browser

@@ -8,3 +8,4 @@ Scenario: Verify that the results are displayed in Descending order of Assignmen
 #Given User is on Assignment Page
 When User clicks onthe Descending arrow (down ) near to the Assignment Description
 Then User can see the results in Descending order of Assignment name
+  And Close Browser

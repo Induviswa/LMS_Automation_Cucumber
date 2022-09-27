@@ -135,6 +135,9 @@ public class ProgramPageFooter extends BrowserConfig {
     @FindBy(xpath = "//button[@type='button']//span[@class='p-paginator-icon pi pi-angle-right']//ancestor::button")
     WebElement isNextPagelinkIsDis;
 
+    @FindBy(xpath = "//button[@type='button']//span[@class='p-paginator-icon pi pi-angle-double-right']//ancestor::button")
+    WebElement isLastPagelinkIsDis;
+
     @FindBy(xpath = "//span[@class='p-paginator-pages ng-star-inserted']//ancestor::button[1]")
     WebElement Page1;
 
@@ -184,9 +187,19 @@ public class ProgramPageFooter extends BrowserConfig {
 
     public void countOfGrid() throws InterruptedException {
         int totalrecords = 0;
+        int totalpages = 0;
+        System.out.println(isLastPagelinkIsDis);
         btnclicklastpage.click();
-        Thread.sleep(3000);
-        int totalpages = (Integer.parseInt(findlastpage.getText()));
+        String checkOnly5Pages = isLastPagelinkIsDis.getAttribute("class");
+        System.out.println(checkOnly5Pages);
+        if (checkOnly5Pages.contains("p-disabled")){
+            System.out.println("If Case");
+            totalpages = 5;
+        }else {
+            System.out.println("Else case");
+            Thread.sleep(3000);
+            totalpages = (Integer.parseInt(findlastpage.getText()));
+        }
         System.out.println("Total no of pages " + totalpages);
         btnclickfirstpage.click();
         for (int i = 1; i <= totalpages; i++) {

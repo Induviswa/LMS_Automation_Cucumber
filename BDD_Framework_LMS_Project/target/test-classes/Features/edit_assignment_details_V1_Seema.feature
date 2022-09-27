@@ -34,5 +34,6 @@ Then User can see updated Due Date
  Given User is on Assignment Details form
  When User clicks <Save> button
  Then User can see 'Successful Assignment Updated' message
+  And Close Browser
  
 

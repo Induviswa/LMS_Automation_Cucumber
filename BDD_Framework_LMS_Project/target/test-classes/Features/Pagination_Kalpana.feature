@@ -42,3 +42,4 @@ Scenario:Verifiy the entry details below data table
 Given User is logged on to the LMS website
 When User lands on Manage User page
 Then User should see the text  "Showing 1 to 4 of 4 entries" beow the user table.
+  And Close Browser

@@ -20,4 +20,5 @@ Scenario: Verify next link on the last page
 Given User is logged on to LMS website
 When User is on last page of Manage Batch
 Then Verify that the next link is disabled
+  And Close Browser
 

@@ -45,4 +45,5 @@ Scenario: Verify Edited Batch details
 Given User is on Batch page
 When User searches with newly updated "Batch Name"
 Then User verifies that the details are correctly updated.
+  And Close Browser
 

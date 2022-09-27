@@ -7,3 +7,4 @@ Scenario: Validate the footer
 Given User is logged on to the the LMS website
 When User is on  Manage Assignment page
 Then User should see the footer as "In total there are 3 programs"
+  And Close Browser

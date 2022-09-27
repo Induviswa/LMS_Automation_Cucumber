@@ -15,3 +15,4 @@ Scenario:Updating with Edit button
 Given User table is displayed in manage user page
 When User clicks Edit button
 Then "User Details" dialog box should be displayed for editing
+  And Close Browser

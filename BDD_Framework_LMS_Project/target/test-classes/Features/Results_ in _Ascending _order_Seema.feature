@@ -8,5 +8,6 @@ Scenario: Verify that the results are displayed in Ascending order of Assignment
 #Given User is on Assignment Page
 When  User clicks onthe Ascending arrow (down ) near to the Assignment Description
 Then User can see the results in Ascending order of Assignment Description
+  And Close Browser
 
 

@@ -7,6 +7,7 @@ Then Click on SignIN
     Then User is on any page after Login
     When User clicks the Tab "User"
     Then User should see the Manage user page
+    And Close Browser
     
  
    

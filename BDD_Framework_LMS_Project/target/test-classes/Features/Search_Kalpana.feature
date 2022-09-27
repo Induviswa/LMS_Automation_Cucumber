@@ -20,3 +20,4 @@ Scenario: Verify the functionality of search
 Given User is on Manage user page
 When User types random text in search field which has no matching entry
 Then No rows is displayed
+  And Close Browser
