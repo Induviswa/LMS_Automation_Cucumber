@@ -41,8 +41,8 @@ public class progstepdef extends BrowserConfig {
         return driver;
     }
 
-    @Then("User should see a heading with text {string} on the page")
-    public void userShouldSeeAHeadingWithTextOnThePage(String headingval) {
+    @Then("User should see heading with text {string} on the page")
+    public void userShouldSeeHeadingWithTextOnThePage(String headingval) {
         String getpageheading = loginpage.valHeading();
         System.out.println(getpageheading);
         Assert.assertEquals(headingval,getpageheading);

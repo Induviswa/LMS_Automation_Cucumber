@@ -674,4 +674,9 @@ public void user_can_see_the_results_in_descending_order_of_program_name() {
 	public void userLandsOnAConfirmDeletionForm() {
 		System.out.println("User lands on Confirm Deletion form");
 	}
+
+	@Then("User gets message {string}")
+	public void userGetsMessageSuccessfulBatchCreated() {
+			System.out.println("User able to see Successfull batch created");
+	}
 }

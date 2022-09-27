@@ -141,7 +141,7 @@ public class steps_V1_Seema extends BrowserConfig {
 		// System.out.println("USER LANDED ON DEATAILS FORM");
 	}
 
-	@When("User edits Name")
+	@When("User edit Name")
 	public void user_edits_name() {
 		assign.editname();
 	}
@@ -152,7 +152,7 @@ public class steps_V1_Seema extends BrowserConfig {
 
 	}
 
-	@When("User edits Description")
+	@When("User edit Description")
 	public void user_edits_description() {
 		assign.editdescription();
 	}
@@ -162,7 +162,7 @@ public class steps_V1_Seema extends BrowserConfig {
 		assign.getupdateddescription();
 	}
 
-	@When("User edits Grade")
+	@When("User edit Grade")
 	public void user_edits_grade() {
 		assign.editgrade();
 	}
