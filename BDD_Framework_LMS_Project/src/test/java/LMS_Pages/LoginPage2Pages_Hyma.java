@@ -21,8 +21,8 @@ public class LoginPage2Pages_Hyma extends BrowserConfig {
     @FindBy(xpath = "//form[@class='ng-untouched ng-pristine ng-invalid']/p")
     WebElement txtHeading;
 
-    //@FindBy(id = "errormessage")
-    //WebElement Message;
+    @FindBy(id = "errormessage")
+    WebElement Message;
 
 
     public LoginPage2Pages_Hyma() {
@@ -61,8 +61,8 @@ public class LoginPage2Pages_Hyma extends BrowserConfig {
         Login.click();
     }
 
-    /*public void getMsg() {
+    public void getMsg() {
         Message.getText();
 
-    }*/
+    }
 }
