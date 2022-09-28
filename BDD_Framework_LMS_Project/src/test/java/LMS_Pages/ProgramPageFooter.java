@@ -2,6 +2,9 @@ package LMS_Pages;
 
 import BaseUtils.BrowserConfig;
 import io.qameta.allure.Allure;
+import org.apache.commons.compress.archivers.zip.X000A_NTFS;
+import org.apache.logging.log4j.LogManager;
+import org.apache.logging.log4j.Logger;
 import org.openqa.selenium.*;
 import org.openqa.selenium.support.FindBy;
 import org.openqa.selenium.support.PageFactory;
@@ -11,6 +14,8 @@ import java.io.ByteArrayInputStream;
 import java.util.List;
 
 public class ProgramPageFooter extends BrowserConfig {
+
+    private static Logger logger = LogManager.getLogger(ProgramPageFooter.class);
 
     String isradiochecked = "false";
     String firstPgmname;
@@ -44,6 +49,12 @@ public class ProgramPageFooter extends BrowserConfig {
 
     @FindBy(xpath = "//button[@class='p-paginator-last p-paginator-element p-link p-ripple ng-star-inserted p-disabled']//parent::div/span[2]/button[@class='p-paginator-page p-paginator-element p-link p-highlight p-ripple ng-star-inserted']")
     WebElement findlastpage;
+
+    @FindBy(xpath = "//button[@class='p-paginator-last p-paginator-element p-link p-ripple ng-star-inserted p-disabled']")
+    WebElement findlastlessthan6;
+
+    @FindBy(xpath = "//button[@class='p-paginator-page p-paginator-element p-link p-ripple ng-star-inserted p-highlight']")
+    WebElement test;
 
     @FindBy(xpath = "//tbody[@class='p-datatable-tbody']//tr[1]//div[@role='checkbox']")
     WebElement firstpgmCheckbox;
@@ -149,34 +160,40 @@ public class ProgramPageFooter extends BrowserConfig {
     }
 
     public String getlistofpagesdisplayed() {
+        logger.info("Display list of pages");
         System.out.println(listofPages.getText());
         return listofPages.getText();
     }
 
     public String gettotalprogramcount() {
+        logger.info("System display total number of programs in Manage Program");
         System.out.println(totalPrograms.getText());
         return totalPrograms.getText();
     }
 
     public String DsabledDelIcon() {
+        logger.info("Validate whether the delete button is disabled");
         String textVal = CheckDelIcon.getAttribute("aria-hidden");
         System.out.println(textVal);
         return textVal;
     }
 
     public String Searchbar() {
+        logger.info("Find search text box");
         String SrchtextVal = SeachTextValue.getAttribute("placeholder");
         System.out.println(SrchtextVal);
         return SrchtextVal;
     }
 
     public void SendNamePharse(String NamePharse) {
+        logger.info("Clear the search text and enter pharse to search");
         SeachTextValue.clear();
         SeachTextValue.sendKeys(NamePharse);
     }
 
     public String EntriesRow() throws InterruptedException {
         Thread.sleep(1000);
+        logger.info("Entris of names phrase should be displayed");
         System.out.println(EntryofNamephrase.getText());
         return EntryofNamephrase.getText();
     }
@@ -186,18 +203,15 @@ public class ProgramPageFooter extends BrowserConfig {
     }
 
     public void countOfGrid() throws InterruptedException {
+        logger.info("Total number of programs in the page");
         int totalrecords = 0;
         int totalpages = 0;
-        System.out.println(isLastPagelinkIsDis);
         btnclicklastpage.click();
-        String checkOnly5Pages = isLastPagelinkIsDis.getAttribute("class");
-        System.out.println(checkOnly5Pages);
-        if (checkOnly5Pages.contains("p-disabled")){
-            System.out.println("If Case");
-            totalpages = 5;
-        }else {
-            System.out.println("Else case");
-            Thread.sleep(3000);
+        Thread.sleep(1000);
+        System.out.println(totalpages);
+        try{
+            totalpages = (Integer.parseInt(test.getText()));
+        }catch (NoSuchElementException e){
             totalpages = (Integer.parseInt(findlastpage.getText()));
         }
         System.out.println("Total no of pages " + totalpages);
@@ -217,6 +231,7 @@ public class ProgramPageFooter extends BrowserConfig {
     }
 
     public void clickfirstcheckbox() {
+        logger.info("Take first program");
         firstpgmCheckbox.click();
     }
 
@@ -227,11 +242,13 @@ public class ProgramPageFooter extends BrowserConfig {
     }
 
     public void Clkeditbutton() {
+        logger.info("Edit first program");
         firstpgmedit.click();
     }
 
     public String valeditpagetitle() throws InterruptedException {
         Thread.sleep(1000);
+        logger.info("Validate Edit page title");
         String editpageheading = editpagetitle.getText();
         System.out.println(editpageheading);
         return editpageheading;

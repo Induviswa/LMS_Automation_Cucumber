@@ -183,7 +183,7 @@ public class steps_V1_Seema extends BrowserConfig {
 	}
 
 	@When("User clicks <Cancel> button")
-	public void user_clicks_cancel_button() {
+	public void user_clicks_cancel_button() throws InterruptedException {
 		assign.clickcancel();
 
 	}
@@ -226,7 +226,7 @@ public class steps_V1_Seema extends BrowserConfig {
 
 	@When("User clicks <Yes> button")
 	public void user_clicks_yes_button() {
-		// assign.clickyes();
+		assign.clickyes();
 		System.out.println("USER IS ABLE TO DELETE ");
 
 	}
@@ -244,7 +244,7 @@ public class steps_V1_Seema extends BrowserConfig {
 	}
 
 	@When("User selects more than one Assignment using checkbox")
-	public void user_selects_more_than_one_assignment_using_checkbox() {
+	public void user_selects_more_than_one_assignment_using_checkbox() throws InterruptedException {
 		// assign.clickoncheckboxassignment();
 		assign.clickonmultiplecheckbox();
 
@@ -436,7 +436,8 @@ System.out.println("Success message displayed");
 
 	}
 
-	@Then("User lands on {string} message.")
+	@Then("User lands on Confirm Deletion message.")
 	public void userLandsOnConfirmDeletionMessage() {
+		System.out.println("System landed on the Delete page");
 	}
 }
