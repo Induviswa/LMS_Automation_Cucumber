@@ -27,7 +27,7 @@ public class NameDeletePage_Lavi  extends BrowserConfig {
 	@FindBy(xpath="//div[2]/div[2]/span/input")
 	WebElement Search1;
 	
-	@FindBy(xpath = "//div/div/div[3]/button[1]")
+	@FindBy(xpath = "//span[@class='p-button-label' and contains(text(),'No')]")
 	WebElement No2;
 	
 	public void login() {

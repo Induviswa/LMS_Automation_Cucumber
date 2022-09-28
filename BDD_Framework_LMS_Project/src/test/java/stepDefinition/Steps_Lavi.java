@@ -7,6 +7,8 @@ import io.cucumber.java.en.Given;
 import io.cucumber.java.en.Then;
 import io.cucumber.java.en.When;
 
+import javax.swing.plaf.synth.SynthColorChooserUI;
+
 public class Steps_Lavi extends BrowserConfig {
 	
 	//public WebDriver driver;
@@ -166,6 +168,7 @@ public void user_clicks_yes_button() {
 @Then("User can see {string} message")
 public void user_can_see_message(String SuccessfulBatchDeleted) {
 System.out.println("User should see SuccessfulBatchDeleted message");
+System.out.println(SuccessfulBatchDeleted);
 }
 
 @When("User Searches for {string}")

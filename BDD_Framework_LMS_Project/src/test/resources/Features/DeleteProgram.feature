@@ -23,5 +23,4 @@ Feature: Delete Program
         When User clicks on "Delete" button
         Then User lands on Confirm Deletion form.
         When Click No
-        Then User can see Successful Program Deleted message
         And Close Browser

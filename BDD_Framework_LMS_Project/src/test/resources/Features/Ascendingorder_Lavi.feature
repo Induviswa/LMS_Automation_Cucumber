@@ -10,7 +10,7 @@ Given User is on Batch page
 When User clicks on the Ascending arrow (down ) near to the Batch Description 
 Then User can see the results in Ascending order of Batch Description
 
-Scenario:
+Scenario: Verify that the results are displayed in Ascending order of batch Status
 Given User is on Batch page
 When User clicks on the Ascending arrow (down ) near to the Batch Status 
 Then  User can see the results in Ascending order of Batch Status

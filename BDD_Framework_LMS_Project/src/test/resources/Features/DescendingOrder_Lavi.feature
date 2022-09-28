@@ -16,7 +16,7 @@ Scenario: Verify that the results are displayed in Descending order No of Classe
 Given User is on Batch page
 When User clicks on the Descending arrow (down ) near to the No Of Classes
 Then User can see the results in Descending order of No of Classes
-Scenario: 
+Scenario: Verify that the results are displayed in Descending order No of Program Name
 Given User is on Batch page
 When Verify that the results are displayed in Descending order of Program Name
 Then User can see the results in Descending order of Program Name

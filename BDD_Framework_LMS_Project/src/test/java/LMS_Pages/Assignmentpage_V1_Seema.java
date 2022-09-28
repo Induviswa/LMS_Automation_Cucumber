@@ -141,9 +141,9 @@ public class Assignmentpage_V1_Seema extends BrowserConfig {
 		System.out.println("USER updated due date   as " + updatedname);
 	}
 
-	public void clickcancel() {
-
-		driver.findElement(By.xpath("/html/body/app-root/app-assignment/p-dialog/div/div/div[3]/button[1]/span[2]"))
+	public void clickcancel() throws InterruptedException {
+		Thread.sleep(1000);
+		driver.findElement(By.xpath("//span[@class='p-button-label' and contains(text(),'Cancel')]"))
 				.click();
 		// Thread.sleep(1000);
 
@@ -169,24 +169,26 @@ public class Assignmentpage_V1_Seema extends BrowserConfig {
 	}
 
 	public void clickyes() {
-		driver.findElement(By.xpath("/html/body/app-root/app-assignment/p-confirmdialog/div/div/div[3]/button[2]"))
+		driver.findElement(By.xpath("//span[@class='p-button-label' and contains(text(),'Yes')]"))
 				.click();
 	}
 
 	public void clickno() {
-		driver.findElement(By.xpath("/html/body/app-root/app-assignment/p-confirmdialog/div/div/div[3]/button[1]"))
+		driver.findElement(By.xpath("//span[@class='p-button-label' and contains(text(),'No')]"))
 				.click();
 	}
 
-	public void clickonmultiplecheckbox() {
+	public void clickonmultiplecheckbox() throws InterruptedException {
+		Thread.sleep(1000);
 		driver.findElement(By.xpath(
 				"/html/body/app-root/app-assignment/div/mat-card/mat-card-content/p-table/div/div[1]/table/thead/tr/th[1]/p-tableheadercheckbox/div/div[2]"))
 				.click();
 	}
 
 	public void clickdeleteonleft() {
+		System.out.println("Click Delete button");
 		driver.findElement(
-				By.xpath("/html/body/app-root/app-assignment/div/mat-card/mat-card-title/div[2]/div[1]/button/span[1]"))
+				By.xpath("//tbody[@class='p-datatable-tbody']//tr[1]//span[@class='p-button-icon pi pi-trash']"))
 				.click();
 	}
 

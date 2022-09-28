@@ -30,7 +30,6 @@ Feature: Add New Program
     And User enters <Description> in Program Description in text box
     And User selects <status> using radiobutton
     When User clicks Cancel button
-    Then User can see Successful Program Deleted message
     And Close Browser
     Examples:
       | Name            | Description         |status        |
